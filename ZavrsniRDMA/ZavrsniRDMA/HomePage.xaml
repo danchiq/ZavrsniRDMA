@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ZavrsniRDMA.HomePage">
+    <ContentPage.Content>
+        <StackLayout BackgroundColor="WhiteSmoke">
+            <Label Text="Welcome to the LanGuide users and result data center"  FontSize="22" HorizontalTextAlignment="Center" Margin="20,10,20,0" TextColor="#3ba680" FontAttributes="Bold"></Label>
+            <Image Source="logo.png" WidthRequest="400" HeightRequest="100"></Image>
+            <Label Text="Browse and download data about users and their activity on the LanGuide app" HorizontalTextAlignment="Center" FontSize="16" Margin="20,20,20,20" TextColor="#3ba680"></Label>
+            <Button  Text="USERS &#x0a; &#x0a; List of all students who are using the apps" TextTransform="None" Margin="20,10,20,10" BackgroundColor="#3ba680" Clicked="NavigateToUsersPage"/>
+            <Button  Text="RESULTS &#x0a; &#x0a; List of all results in solving exercises" BackgroundColor="#3ba680" TextTransform="None" Margin="20,10,20,10" Clicked="NavigateToResultsPage"/>
+            <Button  Text="LANGUAGES &#x0a; &#x0a; List of all languages avaliable on exercises " BackgroundColor="#3ba680" TextTransform="None" Margin="20,10,20,10" Clicked="NavigateToLanguagesPage"/>
+            
+            <BoxView Color="Gray" HeightRequest="0"></BoxView>
+            <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand" Margin="30">
+                <Label x:Name="ProfileButton" Text="My Profile" HorizontalTextAlignment="Start" TextColor="#3ba680">
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer  Tapped="OnProfile_Tap"/>
+                    </Label.GestureRecognizers>
+                </Label>
+                <Label Text="-" TextColor="Black"/>
+                <Label x:Name="LogoutButton" Text="Logout" HorizontalOptions="End" TextColor="#3ba680">
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="LogoutTap"/>
+                    </Label.GestureRecognizers>
+                </Label>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

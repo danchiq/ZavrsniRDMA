@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ZavrsniRDMA.RegisterPage">
+    <ContentPage.Content>
+        <StackLayout BackgroundColor="WhiteSmoke">
+            <Frame BackgroundColor="#3ba680">
+                <Label Text="Register" FontSize="Title" VerticalOptions="Center" HorizontalOptions="Center" TextColor="White"></Label>
+            </Frame>
+            <StackLayout>
+                <Entry x:Name="inputEmail" Placeholder="Email" Keyboard="Email" VerticalOptions="End" Margin="20"/>
+                <Entry x:Name="inputPass" Placeholder="Password" IsPassword="True" VerticalOptions="End" Margin="20"/>
+                <Button x:Name="registerButton" Text="Register" Clicked="RegisterButton_Clicked" VerticalOptions="End" Margin="20"/>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

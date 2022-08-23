@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "21236454169",
+    "project_id": "zavrsnirdma-70e45",
+    "storage_bucket": "zavrsnirdma-70e45.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:21236454169:android:033e30f0580036fd722b88",
+        "android_client_info": {
+          "package_name": "com.companyname.zavrsnirdma"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "21236454169-pqadj4pni4vr1j4v3pbk3d96ffhp9bvi.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBdxijjf4QJbfDjf8xmW2-PAwyqdDbm16k"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "21236454169-pqadj4pni4vr1j4v3pbk3d96ffhp9bvi.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

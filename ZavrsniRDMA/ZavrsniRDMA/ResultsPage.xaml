@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ZavrsniRDMA.ResultsPage">
+    <ContentPage.Content>
+        <StackLayout BackgroundColor="WhiteSmoke">
+            <Frame BackgroundColor="#3ba680">
+                <Label Text="Results" FontSize="Title" VerticalOptions="Center" HorizontalOptions="Center" TextColor="White"></Label>
+            </Frame>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="3*"/>
+                    <RowDefinition Height="3*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <BoxView Grid.Row="0" Grid.ColumnSpan="2"/>
+                <Label Grid.Row="0" Grid.ColumnSpan="2" Text="Use score to filter" HorizontalOptions="Center" VerticalOptions="Center"/>
+                <BoxView Grid.Row="1"/>
+                <Entry Grid.Row="1" x:Name="From" Keyboard="Numeric" Placeholder="from" FontSize="Small" HorizontalOptions="Center" VerticalOptions="Center" />
+
+
+                <BoxView Grid.Row="1" Grid.Column="1"/>
+                <Entry Grid.Row="1" Grid.Column="1" x:Name="To" Keyboard="Numeric" Placeholder="to" HorizontalOptions="Center"
+                  VerticalOptions="Center">
+                </Entry>
+                <BoxView Grid.Row="2" Grid.ColumnSpan="2" />
+                <Button Grid.Row="2" Grid.ColumnSpan="2" VerticalOptions="Center" HorizontalOptions="Center" BackgroundColor="Black" TextColor="White" Margin="10" Text="filter" x:Name="FilterBtn" Clicked="FilterButton_Clicked"></Button>
+            </Grid>
+            <Grid HeightRequest="90" Margin="10, 10">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="2*"/>
+                    <ColumnDefinition Width="1.5*"/>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="1.5*"/>
+                    <ColumnDefinition Width="1.5*"/>
+                </Grid.ColumnDefinitions>
+                <Button FontSize="11" Grid.Column="0" Grid.Row="0"  Text="id"  BackgroundColor="Black" TextColor="White" Clicked="SortId"/>
+                <Button FontSize="11" Grid.Column="1" Grid.Row="0"  Text="exercise" BackgroundColor="Black" TextColor="White" Clicked="SortIdExercise"/>
+                <Button FontSize="11" Grid.Column="5" Grid.Row="0"  Text="skill" BackgroundColor="Black" TextColor="White" Clicked="SkillSort"/>
+                <Button Grid.Column="3" Grid.Row="0"  Text="%" BackgroundColor="Black" TextColor="White" Clicked="PercentSort"/>
+                <Button FontSize="11" Grid.Column="4" Grid.Row="0"  Text="score" BackgroundColor="Black" TextColor="White" Clicked="ScoreSort"/>
+                <Button FontSize="11" Grid.Column="2" Grid.Row="0"  Text="max" BackgroundColor="Black" TextColor="White" Clicked="MaxSort"/>
+
+            </Grid>
+            <Frame Padding="0" Margin="10, 0, 10, 10">
+                <ListView x:Name="results" RowHeight="70" Margin="20">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <Grid VerticalOptions="Center">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="*"/>
+                                    </Grid.RowDefinitions>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="1*"/>
+                                        <ColumnDefinition Width="3*"/>
+                                        <ColumnDefinition Width="1*"/>
+                                        <ColumnDefinition Width="1*"/>
+                                        <ColumnDefinition Width="1*"/>
+                                        <ColumnDefinition Width="2*"/>
+                                    </Grid.ColumnDefinitions>
+
+                                    <Label HorizontalOptions="Center" VerticalOptions="Center"  Grid.Column="0" Grid.Row="0" Text="{Binding id_user}"/>
+                                    <Label HorizontalOptions="Center" VerticalOptions="Center" Grid.Column="1" Grid.Row="0" Text="{Binding id_exercise}"/>
+                                    <Label HorizontalOptions="Center" VerticalOptions="Center" Grid.Column="3" Grid.Row="0" Text="{Binding result_percent}"/>
+                                    <Label HorizontalOptions="Center" VerticalOptions="Center" Grid.Column="4" Grid.Row="0" Text="{Binding result_score}"/>
+                                    <Label HorizontalOptions="Center" VerticalOptions="Center" Grid.Column="2" Grid.Row="0" Text="{Binding result_max}"/>
+                                    <Label HorizontalOptions="Center" VerticalOptions="Center" Grid.Column="5" Grid.Row="0" Text="{Binding skill}"/>
+                                </Grid>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+
+            </Frame>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

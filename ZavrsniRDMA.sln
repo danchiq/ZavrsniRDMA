@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZavrsniRDMA.Android", "Zavr
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZavrsniRDMA.iOS", "ZavrsniRDMA\ZavrsniRDMA.iOS\ZavrsniRDMA.iOS.csproj", "{50786D6E-9055-4223-9A23-1DBCDDCAB7EE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZavrsniRDMA", "ZavrsniRDMA\ZavrsniRDMA\ZavrsniRDMA.csproj", "{7E55D196-F2D8-4FA2-8ED1-CF0305FABFA2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ZavrsniRDMA", "ZavrsniRDMA\ZavrsniRDMA\ZavrsniRDMA.csproj", "{7E55D196-F2D8-4FA2-8ED1-CF0305FABFA2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
