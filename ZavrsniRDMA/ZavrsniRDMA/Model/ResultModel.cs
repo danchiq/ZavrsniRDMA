@@ -4,7 +4,7 @@ using System.Text;
 
 namespace ZavrsniRDMA
 {
-    internal class ResultModel
+    public class ResultModel
     {
         public string id_user { get; set; }
         public string email { get; set; }

@@ -4,8 +4,8 @@ using System.Text;
 
 namespace ZavrsniRDMA.Model
 {
-    internal class LanguageModel
+    public class LanguageModel
     {
-        public string Language { get; set; }    
+        public string language { get; set; }    
     }
 }

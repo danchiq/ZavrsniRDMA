@@ -16,6 +16,10 @@ namespace ZavrsniRDMA
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class UsersPage : ContentPage
     {
+        bool Id = false;
+        bool Email = false;
+        bool Time = false;
+
         List<UserModel> modelList = new List<UserModel>();
 
         public UsersPage()
@@ -48,23 +52,52 @@ namespace ZavrsniRDMA
 
                 foreach (var userObject in jsonArray)
                 {
-                    UserModel tmp = new UserModel();
+                    UserModel u = new UserModel();
 
-                    tmp.id_user = userObject["id_user"].ToString();
-                    tmp.email = userObject["email"].ToString();
-                    tmp.create_time = userObject["create_time"].ToString();
+                    u.id_user = userObject["id_user"].ToString();
+                    u.email = userObject["email"].ToString();
+                    u.create_time = userObject["create_time"].ToString();
 
-                    modelList.Add(tmp);
+                    modelList.Add(u);
                 }
             }
 
             users.ItemsSource = modelList;
         }
-
-        private void DeleteUser(object sender, EventArgs e)
+        private void SortId(object sender, EventArgs e)
         {
-            modelList.Clear();
-            users.ItemsSource = modelList;
+            List<UserModel> sList = new List<UserModel>();
+            if (Id)
+                sList = modelList.OrderBy(o => o.id_user).ToList();
+            else
+                sList = modelList.OrderByDescending(o => o.id_user).ToList();
+
+            Id = !Id;
+            users.ItemsSource = null;
+            users.ItemsSource = sList;
+
+        }
+        private void CreateTimeSort(object sender, EventArgs e)
+        {
+            List<UserModel> sList = new List<UserModel>();
+            if (Time)
+                sList = modelList.OrderBy(o => o.create_time).ToList();
+            else
+                sList = modelList.OrderByDescending(o => o.create_time).ToList();
+
+            Time= !Time;
+            users.ItemsSource = null;
+            users.ItemsSource = sList;
+        }
+        private void EmailSort(object sender, EventArgs e)
+        {
+            List<UserModel> sList = new List<UserModel>();
+            if (Email)
+                sList = modelList.OrderBy(o => o.email).ToList();
+
+            Email= !Email;
+            users.ItemsSource = null;
+            users.ItemsSource = sList;
         }
     }
 }

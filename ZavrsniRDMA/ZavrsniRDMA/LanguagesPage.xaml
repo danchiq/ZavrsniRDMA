@@ -13,20 +13,26 @@
                     <RowDefinition Height="10"  />
                     <RowDefinition Height="3*" />
                 </Grid.RowDefinitions>
-                
-                <ListView Grid.Row="1" Margin="10,0,10,20" Grid.ColumnSpan="2" ItemsSource="{x:Static local:LanguagesPage.Languages}" BackgroundColor="White">
+            </Grid>
+            <ListView x:Name="list" RowHeight="40" Margin="20">
                     <ListView.ItemTemplate>
                         <DataTemplate>
                             <ViewCell>
-                                <StackLayout Orientation="Vertical" Margin="15,10">
-                                    <Label Text="{Binding .}" TextColor="Black"/>
-                                    
-                                </StackLayout>
+                                <Grid VerticalOptions="Center">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="*"/>
+                                    </Grid.RowDefinitions>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="1*"/>
+                                    </Grid.ColumnDefinitions>
+
+                                    <Label Grid.Column="0" Grid.Row="0" HorizontalOptions="Center" VerticalTextAlignment="Center" Text="{Binding language}"/>
+
+                                </Grid>
                             </ViewCell>
                         </DataTemplate>
                     </ListView.ItemTemplate>
-                </ListView>
-            </Grid>
+            </ListView>
             
         </StackLayout>
     </ContentPage.Content>

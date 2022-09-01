@@ -29,6 +29,7 @@
                 </Entry>
                 <BoxView Grid.Row="2" Grid.ColumnSpan="2" />
                 <Button Grid.Row="2" Grid.ColumnSpan="2" VerticalOptions="Center" HorizontalOptions="Center" BackgroundColor="Black" TextColor="White" Margin="10" Text="filter" x:Name="FilterBtn" Clicked="FilterButton_Clicked"></Button>
+                
             </Grid>
             <Grid HeightRequest="90" Margin="10, 10">
                 <Grid.RowDefinitions>
@@ -42,12 +43,13 @@
                     <ColumnDefinition Width="1.5*"/>
                     <ColumnDefinition Width="1.5*"/>
                 </Grid.ColumnDefinitions>
-                <Button FontSize="11" Grid.Column="0" Grid.Row="0"  Text="id"  BackgroundColor="Black" TextColor="White" Clicked="SortId"/>
-                <Button FontSize="11" Grid.Column="1" Grid.Row="0"  Text="exercise" BackgroundColor="Black" TextColor="White" Clicked="SortIdExercise"/>
-                <Button FontSize="11" Grid.Column="5" Grid.Row="0"  Text="skill" BackgroundColor="Black" TextColor="White" Clicked="SkillSort"/>
-                <Button Grid.Column="3" Grid.Row="0"  Text="%" BackgroundColor="Black" TextColor="White" Clicked="PercentSort"/>
-                <Button FontSize="11" Grid.Column="4" Grid.Row="0"  Text="score" BackgroundColor="Black" TextColor="White" Clicked="ScoreSort"/>
-                <Button FontSize="11" Grid.Column="2" Grid.Row="0"  Text="max" BackgroundColor="Black" TextColor="White" Clicked="MaxSort"/>
+
+                <Button FontSize="11" Grid.Column="0" Grid.Row="0"  Text="id"  BackgroundColor="#3ba680" TextColor="White" Clicked="SortId"/>
+                <Button FontSize="11" Grid.Column="1" Grid.Row="0"  Text="exercise" BackgroundColor="#3ba680" TextColor="White" Clicked="SortIdExercise"/>
+                <Button FontSize="11" Grid.Column="5" Grid.Row="0"  Text="skill" BackgroundColor="#3ba680" TextColor="White" Clicked="SkillSort"/>
+                <Button Grid.Column="3" Grid.Row="0"  Text="%" BackgroundColor="#3ba680" TextColor="White" Clicked="PercentSort"/>
+                <Button FontSize="11" Grid.Column="4" Grid.Row="0"  Text="score" BackgroundColor="#3ba680" TextColor="White" Clicked="ScoreSort"/>
+                <Button FontSize="11" Grid.Column="2" Grid.Row="0"  Text="max" BackgroundColor="#3ba680" TextColor="White" Clicked="MaxSort"/>
 
             </Grid>
             <Frame Padding="0" Margin="10, 0, 10, 10">
